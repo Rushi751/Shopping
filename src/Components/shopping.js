@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 const Shopping=({element})=>{
+    const [add,setAdd]=useState(0)
     const[Show,setShow]=useState(false)
     const shopShow={
         display:Show?"block":"none"
@@ -24,7 +25,7 @@ return(
                 <label className="pop-new">New Arrivals</label><br></br>
             </div>
            
-            <button className="cart"><label>🛒</label>Cart<label>0️⃣</label></button>
+            <button className="cart"><label>🛒</label>Cart<label>{add}</label></button>
         </div>
         <div className="shop-3">
             <h1 className="size-1">Shop in style</h1>
@@ -49,7 +50,13 @@ return(
                     <div className="star">⭐⭐⭐⭐⭐</div>
                     <div className="price"><span className="line-through">$20.00</span> $18.00</div>
                 </div>
-                <button className="view-options-cart">Add to cart</button>
+                <button className="view-options-cart" 
+                onClick={
+                    ()=>{
+                      setAdd(add+1)
+                    }
+                }
+                >Add to cart</button>
             </div>
             <div className="div-third sale">
             <div className="sub-first">450 x 300</div>
@@ -58,7 +65,12 @@ return(
                     <label className="fancy-product">Sale Item</label>
                     <div className="price"><span className="mid-line">$50.00</span> $25.00</div>
                 </div>
-                <button className="Add-cart-sale">Add To Cart</button>
+                <button className="Add-cart-sale"
+                  onClick={
+                    ()=>{
+                      setAdd(add+1)
+                    }
+                }>Add To Cart</button>
             </div>
             <div className="div-fourth sale">
             <div className="sub-first">450 x 300</div>
@@ -67,7 +79,12 @@ return(
                     <div className="star">⭐⭐⭐⭐⭐</div>
                     <div className="price-single">$40.00</div>
                 </div>
-                <button className="Add-cart-fourth">Add To Cart</button>
+                <button className="Add-cart-fourth"
+                  onClick={
+                    ()=>{
+                      setAdd(add+1)
+                    }
+                }>Add To Cart</button>
             </div>
             </div>
             <div className="sub-shop">
@@ -79,7 +96,12 @@ return(
                     <label className="fancy-product">Sale Item</label>
                     <div className="price"><span className="mid-line">$50.00</span> $25.00</div>
                 </div>
-                <button className="Add-cart-sale">Add To Cart</button>
+                <button className="Add-cart-sale"
+                  onClick={
+                    ()=>{
+                      setAdd(add+1)
+                    }
+                }>Add To Cart</button>
                 </div>
             <div className="div-sec sale">
             <div className="sub-first">450 x 300</div>
@@ -97,7 +119,12 @@ return(
                     <div className="star">⭐⭐⭐⭐⭐</div>
                     <div className="price"><span className="line-through">$20.00</span> $18.00</div>
                 </div>
-                <button className="view-options-cart">Add to cart</button>
+                <button className="view-options-cart"
+                  onClick={
+                    ()=>{
+                      setAdd(add+1)
+                    }
+                }>Add to cart</button>
             </div>
             <div className="div-fourth sale">
             <div className="sub-first">450 x 300</div>
@@ -106,7 +133,12 @@ return(
                     <div className="star">⭐⭐⭐⭐⭐</div>
                     <div className="price-single">$40.00</div>
                 </div>
-                <button className="Add-cart">Add To Cart</button>
+                <button className="Add-cart"
+                  onClick={
+                    ()=>{
+                      setAdd(add+1)
+                    }
+                }>Add To Cart</button>
             </div>
             </div>
         </div>
